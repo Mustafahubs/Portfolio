@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import EmailIcon from '@mui/icons-material/Email';
-import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import { FaWhatsapp, FaTelegramPlane, FaDiscord } from 'react-icons/fa';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import '../assets/styles/Contact.scss';
@@ -27,7 +27,7 @@ function Contact() {
 
         setStatus('sending');
         try {
-            const rawContent = `**New portfolio message**\n**From:** ${name} (${email || 'no email given'})\n**Message:** ${message}`;
+            const rawContent = `**New portfolio message**\n**From:** ${name} (${email})\n**Message:** ${message}`;
             const content = rawContent.length > 1900 ? `${rawContent.slice(0, 1897)}...` : rawContent;
 
             const response = await fetch(DISCORD_WEBHOOK_URL, {
@@ -66,6 +66,9 @@ function Contact() {
                     <a href="https://t.me/self_mustafa" target="_blank" rel="noreferrer" className="contact-channel">
                         <FaTelegramPlane /> Telegram
                     </a>
+                    <a href="https://discordapp.com/users/769941117705388035" target="_blank" rel="noreferrer" className="contact-channel">
+                        <FaDiscord /> Discord
+                    </a>
                 </div>
 
                 <form className="contact-form" onSubmit={handleSubmit}>
@@ -79,10 +82,11 @@ function Contact() {
                             onChange={(e) => setName(e.target.value)}
                         />
                         <TextField
-                            label="Your Email (optional)"
+                            label="Your Email"
                             name="email"
                             type="email"
                             variant="outlined"
+                            required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />

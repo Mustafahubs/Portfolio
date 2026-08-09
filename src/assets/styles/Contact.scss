@@ -83,15 +83,6 @@ a.contact-channel:hover {
     background-color: #5000ca;
     color: white;
   }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
 }
 
 .form-flex {
@@ -111,4 +102,60 @@ form {
 .body-form {
   width: 100% !important;
   margin-bottom: 15px !important;
+}
+
+.dark-mode .contact_wrapper {
+  .MuiOutlinedInput-root {
+    background-color: rgba(255, 255, 255, 0.06);
+
+    .MuiOutlinedInput-notchedOutline {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: #a259ff;
+    }
+  }
+
+  .MuiOutlinedInput-input,
+  .MuiInputBase-inputMultiline {
+    color: rgba(255, 255, 255, 0.92);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
+  }
+
+  .MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.6);
+
+    &.Mui-focused {
+      color: #a259ff;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
+    -webkit-box-shadow: 0 0 0 1000px #1a1e24 inset;
+    box-shadow: 0 0 0 1000px #1a1e24 inset;
+    caret-color: rgba(255, 255, 255, 0.92);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.light-mode .contact_wrapper {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill {
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.87);
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    box-shadow: 0 0 0 1000px #ffffff inset;
+    caret-color: rgba(0, 0, 0, 0.87);
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
