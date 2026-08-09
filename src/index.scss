@@ -92,6 +92,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
   justify-content: center;
 }
 
+.items-container > h2,
+.skills-container > h2,
+.projects-container > h2 {
+  font-size: 2.5em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
 .light-mode {
   background-color: #f8f9fa;
 

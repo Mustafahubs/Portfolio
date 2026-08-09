@@ -10,56 +10,76 @@ function Timeline() {
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
-        <VerticalTimeline>
+        <h2>Career History</h2>
+        <VerticalTimeline animate={false}>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="Feb 2025 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Python Instructor and Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Remote (U.S. client-based work)</h4>
+            <h3 className="vertical-timeline-element-title">Founder & Lead Engineer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Mustafa Code Sol Ltd — Remote (Registered London, UK)</h4>
             <p>
-            Teaching Python Programming, Mentoring Junior Developers, Developing Automation and Backend Solutions, Adv-Web Automation, Generative AI Solutions, Python FastAPI, Business Growth Solutions
+              Founded and lead a UK-registered software company delivering Python/FastAPI backends, browser-automation integrations, and self-hosted infrastructure to commercial clients, generating $70K-$100K+ in combined engagement revenue.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Oct 2021 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Developer and Automation Specialist</h3>
-            <h4 className="vertical-timeline-element-subtitle">Freelance (Remote)</h4>
+            <h3 className="vertical-timeline-element-title">Data Analyst and Web Scraping</h3>
+            <h4 className="vertical-timeline-element-subtitle">Fiverr — Remote</h4>
             <p>
-              Frontend and Backend Development, API Data Integration, Custom Automation Scripts, Client Communication, Team Collaboration
+              200+ freelance automation and web-scraping projects delivered, maintaining a 4.9-star rating and reaching Level 2 seller status within 6 months.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Aug 2021 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Junior Automation Developer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Fiver.com</h4>
+            <h3 className="vertical-timeline-element-title">Python Browser Automation Bots Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Upwork — Remote</h4>
             <p>
-              Python Automation, API Data Extraction, Web Scraping, Client-specific Automation Projects
+              Top Rated freelancer status with a strong Job Success Score, building browser-automation and API-integration tools across real estate, ticketing, and healthcare clients.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2020"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Jul 2022 - Mar 2023"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Upwork.com</h4>
+            <h3 className="vertical-timeline-element-title">Web Automation Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">PolarGrowth — Remote (Illinois, US)</h4>
             <p>
-              Data Automation, Statistical Analysis, Market Research, Report Generation
+              Automated the full outbound mailing pipeline for a marketing-technology startup, building bots across Apollo.io, Quickmail.io, Zoho, and Instantly.ai and reverse-engineering hidden internal APIs to bypass GUI load delays.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="2021 - present"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Programming Instructor</h3>
+            <h4 className="vertical-timeline-element-subtitle">Independent / Freelance — Bahawalnagar, Pakistan</h4>
+            <p>
+              4+ years teaching Python, web scraping, and backend fundamentals; built a full curriculum and mentored students into paid freelance automation work.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

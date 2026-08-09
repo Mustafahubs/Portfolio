@@ -1,53 +1,99 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
+import { FaSchool, FaHeartbeat, FaTicketAlt, FaHome, FaEnvelopeOpenText, FaCloud } from 'react-icons/fa';
+import Chip from '@mui/material/Chip';
 import '../assets/styles/Project.scss';
+
+interface ProjectEntry {
+    icon: React.ReactNode;
+    color: string;
+    tagline?: string;
+    title: string;
+    stack: string[];
+    description: string;
+    link?: { href: string; label: string };
+    status: string;
+}
+
+const projects: ProjectEntry[] = [
+    {
+        icon: <FaSchool />,
+        color: '#5000ca',
+        tagline: 'Flagship project',
+        title: 'SISSOL — Punjab School Information System',
+        stack: ['FastAPI', 'PostgreSQL', 'Celery', 'Redis', 'Docker', 'Caddy'],
+        description: 'Architected and built a ~31,000-line FastAPI/PostgreSQL/Celery backend wrapping a legacy government student-information system for a Punjab, Pakistan education client — adding offline-first data capture and cross-school dashboards for ~100 schools. Diagnosed and fixed a production task-queue contention issue that was delaying user-facing requests behind a ~980-task sync backlog.',
+        link: { href: 'https://punjabsis.fastapi.us/', label: 'View Live System' },
+        status: 'Live production system',
+    },
+    {
+        icon: <FaHeartbeat />,
+        color: '#c2185b',
+        title: 'Healthcare EHR Integration Suite',
+        stack: ['FastAPI', 'Redis', 'pytest', 'GitHub Actions CI/CD', 'MCP'],
+        description: 'Built production FastAPI integrations across five healthcare practice-management platforms — SimplePractice, AdvancedMD, Availity, JaneApp, and Osmind — for medical billing, scheduling, and insurance-remittance clients. The SimplePractice integration ships with a 25-test automated CI/CD suite on GitHub Actions, Redis response caching, and rate limiting.',
+        status: 'Confidential client work',
+    },
+    {
+        icon: <FaTicketAlt />,
+        color: '#0288d1',
+        title: 'Ticketing Inventory & Pricing Engine',
+        stack: ['Redis', 'Distributed Locking', 'Auth0', 'FastAPI'],
+        description: 'Engineered a Redis-backed distributed-locking pricing engine connecting three ticketing platforms (Automatiq → Lysted → ReachPro) end-to-end, computing tiered pricing ladders and coordinating multi-machine automation to eliminate duplicate listings across StubHub, SeatGeek, VividSeats, Skybox, and Ticketmaster.',
+        status: 'Confidential client work',
+    },
+    {
+        icon: <FaHome />,
+        color: '#2e7d32',
+        title: 'Yhomes1 LLC — Real Estate Lead Automation',
+        stack: ['DrissionPage', 'GraphQL', 'Google Sheets API'],
+        description: 'Built browser-automation integrations reverse-engineering internal REST/GraphQL APIs across Zillow, Auction.com, and Propwire for Yhomes1 LLC, a Washington-based real estate investment company — plus related e-commerce data-collection automation on Daraz.pk and Amazon for the same client relationship.',
+        status: 'Client: Yhomes1 LLC',
+    },
+    {
+        icon: <FaEnvelopeOpenText />,
+        color: '#f57c00',
+        title: 'Outbound Mailing Automation',
+        stack: ['Apollo.io', 'Quickmail.io', 'Zoho', 'Instantly.ai'],
+        description: 'Automated the full outbound mailing pipeline for PolarGrowth, a marketing-technology startup — building bots across Apollo.io, Quickmail.io, Zoho, and Instantly.ai and reverse-engineering hidden internal APIs to bypass GUI load delays, hosted 24/7 on RDP/Linux servers.',
+        status: 'Client: PolarGrowth (Jul 2022 – Mar 2023)',
+    },
+    {
+        icon: <FaCloud />,
+        color: '#455a64',
+        title: 'Hetzner Cloud API Wrapper & Dashboard',
+        stack: ['FastAPI', 'Vue 3', 'xterm.js', 'nginx'],
+        description: 'Built a full-featured FastAPI wrapper around the Hetzner Cloud API (servers, volumes, load balancers, images) with a companion Vue.js dashboard offering real-time VNC/console access via xterm.js — ~17,500 lines, with full CRUD/action coverage independent of the official SDK.',
+        status: 'Personal infrastructure project',
+    },
+];
 
 function Project() {
     return (
         <div className="projects-container" id="projects">
-            <h1>Personal Projects</h1>
+            <h2>Featured Work</h2>
             <div className="projects-grid">
-                <div className="project">
-                    <a href="https://youtu.be/mXlK2ARwtLE" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%" /></a>
-                    <a href="https://youtu.be/mXlK2ARwtLE" target="_blank" rel="noreferrer"><h2>Apollo.io Leads Automation</h2></a>
-                    <p>A tool that will allow you to log in to your Apollo.io account and upload a for search on apollo.io.
-                        Add companies or people to custom saved list, apply filters on job title to narrow down the results.</p>
-                </div>
-                <div className="project">
-                    <a href="https://daraz.pk/" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%" /></a>
-                    <a href="https://daraz.pk/" target="_blank" rel="noreferrer"><h2>Daraz.pk Product Hunter
-                    </h2></a>
-                    <p>A tool to find a good product for selling on Daraz.pk. This tool gives the ease of categories  &gt; sub-Categories selection. It provides a way to analyze the products on an Excel sheet.</p>
-                </div>
-                <div className="project">
-                    <a href="https://youtu.be/jXW_7FTDjpo" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%" /></a>
-                    <a href="https://youtu.be/jXW_7FTDjpo" target="_blank" rel="noreferrer"><h2>Trustpilot.com Companies Scraper</h2></a>
-                    <p>A Python tool that will allow you to provide a list of category URLs in a CSV and scrap all the company's data (Name, Categories, Email, Phone, Website and Reviews) into your local CSV file.</p>
-                </div>
-                <div className="project">
-                    <a href="https://youtu.be/psX4bVL9JVM" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%" /></a>
-                    <a href="https://youtu.be/psX4bVL9JVM" target="_blank" rel="noreferrer"><h2>Python Scraper for Sale Listings</h2></a>
-                    <p>This project is a Python web scraper designed to extract sale listings data from the Real-Estate websites. By utilizing web scraping techniques, the scraper automates the process of gathering valuable information from the website, such as property details, pricing, location, and contact information.</p>
-                </div>
-                <div className="project">
-                    <a href="https://zapier.com/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%" /></a>
-                    <a href="https://zapier.com/" target="_blank" rel="noreferrer"><h2>Zapier Automation Workflow for Streamlined Task Management</h2></a>
-                    <p>Developed a comprehensive automation workflow using Zapier to enhance task management and improve operational efficiency. This project involved integrating multiple applications to automate repetitive tasks and streamline processes. The workflow includes triggers and actions that synchronize data across platforms, reduce manual data entry, and ensure timely updates.</p>
-                </div>
-                <div className="project">
-                    <a href="https://www.stubhub.ie/" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%" /></a>
-                    <a href="https://ticketmaster.com/" target="_blank" rel="noreferrer"><h2>Ticketing Automation Solutions for Major Platforms</h2></a>
-                    <p>Contributed to an advanced automation project focusing on optimizing ticket sales processes across multiple high-traffic ticketing platforms, including Ticketmaster, Dtiprotal, VividSeats, Skybox, StubHub, and TicketNetwork. This project involved developing automation scripts to efficiently manage ticket sales, monitor inventory, and handle customer interactions.</p>
-                </div>
+                {projects.map((project, index) => (
+                    <div className="project" key={index}>
+                        <div className="project-icon-block" style={{ backgroundColor: project.color }}>
+                            {project.icon}
+                        </div>
+                        {project.tagline && <span className="project-tagline">{project.tagline}</span>}
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div className="flex-chips">
+                            {project.stack.map((label, i) => (
+                                <Chip key={i} className="chip" label={label} />
+                            ))}
+                        </div>
+                        <div className="project-footer">
+                            {project.link ? (
+                                <a href={project.link.href} target="_blank" rel="noreferrer" className="project-link">{project.link.label} →</a>
+                            ) : (
+                                <span className="project-status">{project.status}</span>
+                            )}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

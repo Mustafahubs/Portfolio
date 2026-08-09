@@ -42,11 +42,59 @@
         margin-block-end: 0px;
     }
 
+    p.tagline-sub {
+        font-size: 0.95em;
+        opacity: 0.7;
+        margin-top: 12px;
+        font-weight: 400;
+    }
+
     h1 {
         font-size: 5em;
         margin-block-start: 0px;
         margin-block-end: 0px;
     }
+
+    .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 28px;
+
+        a {
+            display: inline-block;
+            padding: 12px 26px;
+            border-radius: 30px;
+            font-size: 0.95em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+
+        .cta-primary {
+            background: #5000ca;
+            color: white;
+        }
+
+        .cta-primary:hover {
+            color: white;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.light-mode .about-section .content .hero-cta .cta-secondary {
+    color: rgb(39, 40, 34);
+    border-color: rgba(39, 40, 34, 0.4);
 }
 
 .about-section .image-wrapper {
