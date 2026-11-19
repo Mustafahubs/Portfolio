@@ -1,1 +1,108 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/Portfolio/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="My personal portfolio website."/><link rel="apple-touch-icon" href="/Portfolio/logo192.png"/><link rel="manifest" href="/Portfolio/manifest.json"/><title>Mustafa</title><script defer="defer" src="/Portfolio/static/js/main.414bbcf4.js"></script><link href="/Portfolio/static/css/main.e2e7d411.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>This portfolio has moved — Ghulam Mustafa</title>
+  <meta name="description" content="My portfolio has a new home: automations and add-ons for solo business owners, built on the tools and websites they already use." />
+  <meta name="theme-color" content="#0D0D0B" />
+  <link rel="canonical" href="https://mustafahubs.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ghulam Mustafa — my portfolio has moved" />
+  <meta property="og:description" content="Visit the new portfolio: automations and add-ons for solo business owners." />
+  <meta property="og:url" content="https://mustafahubs.github.io/" />
+  <meta property="og:image" content="https://mustafahubs.github.io/img/projects/estate-scout-pro.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <noscript><meta http-equiv="refresh" content="6;url=https://mustafahubs.github.io/" /></noscript>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230D0D0B%27/%3E%3Cpath d=%27M16 44V20h14M16 32h12M36 20v24h12M36 32h10%27 stroke=%27%23C8FF2E%27 stroke-width=%278%27 fill=%27none%27/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0D0D0B; --surface:#171714; --text:#EDEAE0; --muted:#8B887C; --accent:#C8FF2E; --accent2:#FF5B2E; --line:rgba(237,234,224,.14); }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body { background: var(--bg); color: var(--text); font-family: "JetBrains Mono", ui-monospace, monospace; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    /* drifting dot grid */
+    .grid { position: fixed; inset: -40px; background-image: radial-gradient(rgba(237,234,224,.16) 1.2px, transparent 1.4px); background-size: 34px 34px; animation: drift 24s linear infinite; mask-image: radial-gradient(ellipse at 50% 45%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 50% 45%, #000 20%, transparent 75%); }
+    @keyframes drift { to { transform: translate(34px, 34px); } }
+    .glow { position: fixed; width: 60vmax; height: 60vmax; left: 50%; top: 40%; transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(200,255,46,.10), transparent 70%); pointer-events: none; animation: breathe 7s ease-in-out infinite; }
+    @keyframes breathe { 50% { opacity: .55; transform: translate(-50%, -50%) scale(1.08); } }
+    main { position: relative; min-height: 100%; display: grid; place-content: center; justify-items: start; gap: 1.6rem; padding: clamp(1.4rem, 6vw, 5rem); max-width: 1100px; margin-inline: auto; }
+    .tag { display: inline-flex; align-items: center; gap: .6rem; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: .5rem .85rem; background: rgba(23,23,20,.7); }
+    .tag i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(200,255,46,.6); animation: ping 2s infinite; }
+    @keyframes ping { 70% { box-shadow: 0 0 0 10px rgba(200,255,46,0); } 100% { box-shadow: 0 0 0 0 rgba(200,255,46,0); } }
+    h1 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: clamp(2.7rem, 9.5vw, 7.4rem); line-height: .95; letter-spacing: -.035em; }
+    h1 em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; color: var(--accent); letter-spacing: -.01em; }
+    .reveal { opacity: 0; transform: translateY(18px); animation: rise .9s cubic-bezier(.22,1,.36,1) forwards; }
+    .d1 { animation-delay: .1s } .d2 { animation-delay: .25s } .d3 { animation-delay: .4s } .d4 { animation-delay: .55s } .d5 { animation-delay: .7s }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    p.lead { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 600; font-size: clamp(1.05rem, 2.3vw, 1.45rem); line-height: 1.4; color: var(--muted); max-width: 40ch; }
+    p.lead b { color: var(--text); font-weight: 600; }
+    /* mini pipeline: chips drift in and snap into a row */
+    .row { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: .9rem 1rem; }
+    .chip { font-size: .72rem; padding: .4rem .7rem; border: 1px solid var(--line); background: var(--surface); color: var(--text); animation: snap 5.5s cubic-bezier(.65,0,.35,1) infinite; animation-delay: calc(var(--i) * 120ms); }
+    .chip::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); margin-right: .5rem; vertical-align: 1px; animation: dot 5.5s infinite; animation-delay: calc(var(--i) * 120ms); }
+    @keyframes snap { 0%, 8% { transform: translate(var(--x), var(--y)) rotate(var(--r)); opacity: .75; } 40%, 82% { transform: none; opacity: 1; border-color: rgba(200,255,46,.55); } 100% { transform: translate(var(--x), var(--y)) rotate(var(--r)); opacity: .75; } }
+    @keyframes dot { 0%, 8% { background: var(--accent2); } 40%, 82% { background: var(--accent); } 100% { background: var(--accent2); } }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem; margin-top: .4rem; }
+    .btn { position: relative; display: inline-flex; align-items: center; gap: .8rem; font: 600 .95rem "JetBrains Mono", monospace; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; padding: 1.15rem 1.7rem; transition: transform .25s cubic-bezier(.22,1,.36,1), background .2s, color .2s, border-color .2s; cursor: pointer; }
+    .btn.primary { background: var(--accent); color: #0D0D0B; border: 1px solid var(--accent); box-shadow: 0 10px 40px -10px rgba(200,255,46,.45); }
+    .btn.primary:hover { transform: translateY(-3px); box-shadow: 0 16px 50px -10px rgba(200,255,46,.6); }
+    .btn.primary .arrow { transition: transform .25s; } .btn.primary:hover .arrow { transform: translateX(6px); }
+    .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .count[hidden] { display: none; }
+    .count { width: min(100%, 460px); display: grid; gap: .6rem; font-size: .76rem; color: var(--muted); }
+    .bar { height: 2px; background: var(--line); overflow: hidden; } .bar span { display: block; height: 100%; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
+    .count button { background: none; border: 0; color: var(--text); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; }
+    .count button:hover { color: var(--accent); }
+    footer { font-size: .72rem; color: var(--muted); letter-spacing: .06em; margin-top: .6rem; }
+    footer a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); } footer a:hover { color: var(--accent); border-color: var(--accent); }
+    @media (prefers-reduced-motion: reduce) { .grid, .glow, .tag i, .chip, .chip::before { animation: none !important; } .reveal { animation: none; opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <main>
+    <span class="tag reveal d1"><i></i> Mustafa Code Sol Ltd &middot; Portfolio</span>
+    <h1 class="reveal d2">This portfolio<br />has <em>moved.</em></h1>
+    <p class="lead reveal d3">A fresh, rebuilt home for my work: <b>automations and add-ons</b> for solo business owners, made on the tools and websites they already use.</p>
+    <div class="row reveal d4" aria-hidden="true">
+      <span class="chip" style="--i:0;--x:-18px;--y:12px;--r:-8deg">new order email</span>
+      <span class="chip" style="--i:1;--x:26px;--y:-14px;--r:7deg">pull report</span>
+      <span class="chip" style="--i:2;--x:-10px;--y:20px;--r:5deg">remove duplicates</span>
+      <span class="chip" style="--i:3;--x:22px;--y:8px;--r:-6deg">update sheet</span>
+      <span class="chip" style="--i:4;--x:-24px;--y:-10px;--r:9deg">send reply</span>
+    </div>
+    <div class="actions reveal d5">
+      <a class="btn primary" id="go" href="https://mustafahubs.github.io/">Visit the new portfolio <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn ghost" href="https://github.com/Mustafahubs">GitHub profile</a>
+    </div>
+    <div class="count reveal d5" id="count" hidden>
+      <div class="bar" aria-hidden="true"><span id="fill"></span></div>
+      <div>Taking you there in <b id="secs">8</b>s &middot; <button type="button" id="stay">stay on this page</button></div>
+    </div>
+    <footer class="reveal d5">New address: <a href="https://mustafahubs.github.io/">mustafahubs.github.io</a></footer>
+  </main>
+  <script>
+    (function () {
+      var URL_NEW = 'https://mustafahubs.github.io/', total = 8, left = total, timer = null;
+      var box = document.getElementById('count'), secs = document.getElementById('secs'), fill = document.getElementById('fill');
+      box.hidden = false;
+      var start = Date.now();
+      function tick() {
+        var elapsed = (Date.now() - start) / 1000;
+        left = Math.max(0, Math.ceil(total - elapsed));
+        secs.textContent = left;
+        fill.style.transform = 'scaleX(' + Math.min(1, elapsed / total) + ')';
+        if (elapsed >= total) { clearInterval(timer); window.location.replace(URL_NEW); }
+      }
+      timer = setInterval(tick, 100);
+      document.getElementById('stay').addEventListener('click', function () { clearInterval(timer); box.hidden = true; });
+    })();
+  </script>
+</body>
+</html>
